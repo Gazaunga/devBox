@@ -65,7 +65,11 @@ sudo dnf group install "LibreOffice"
 sudo dnf group install "Ruby"
 sudo dnf group install "Ruby on Rails"
 
+cd ~/.local/share/fonts
 
+bash download.sh
+
+fc-cache -f
 
 
 
