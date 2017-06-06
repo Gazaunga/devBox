@@ -17,7 +17,7 @@ git clone https://github.com/andrewseidl/dotfiles.git
 cd dotfiles
 
 mv dotfiles/home/.xmonad ~
-mv dotfiles/home/.Xresources ~
+#mv dotfiles/home/.Xresources ~ #for use with urxvt only
 
 #change the top bar to only run on the main screen, in ~/.xmonad/xmobar.hs
 #comment out my custom font in ~/.Xresources, lines 5-6 (comments with a #)
@@ -64,6 +64,7 @@ sudo dnf group install "Legacy Fonts"
 sudo dnf group install "LibreOffice"
 sudo dnf group install "Ruby"
 sudo dnf group install "Ruby on Rails"
+
 
 
 
