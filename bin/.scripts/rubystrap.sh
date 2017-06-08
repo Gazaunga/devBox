@@ -10,3 +10,21 @@ sudo dnf -y install ruby
 
 sudo dnf -y install ruby-tcltk rubygem-rake rubygem-test-unit
 
+sudo dnf group install "C Development Tools and Libraries"
+
+sudo dnf -y install ruby-devel
+
+# Many gems from RubyGems.org are packaged and available in base Fedora to install. These packages have rubygem- prefix to upstream gem names and a rubygem(name) virtual provide, and also comes with precompiled extensions.
+
+# To install thor gem you therefore install rubygem-thor
+
+sudo dnf -y install rubygem-bundler rubygem-jekyll rubygem-sinatra rubygem-thin rubygem-asciidoctor
+
+bundle --local
+
+# Note that system gems are installed into /usr/share/gems and this path needs to be included in $GEM_PATH in case you are about to modify it.
+
+# To look whether the required gem is available as an RPM package, look at IsItFedoraRuby.com site which tracks the Ruby integration within the Fedora project by listing available information about packaged gems.
+
+sudo dnf group install 'Ruby on Rails'
+
