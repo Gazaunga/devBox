@@ -95,6 +95,14 @@ alias exe='sudo chmod +x'
 # make `less` not clear the screen upon exit
 alias less='less -X'
 
+alias ex="bash ~/bin/.scripts/exit-box.sh"
+
+alias lst="bash ~/bin/.scripts/lstree.sh"
+
+alias repostat="bash ~/bin/.scripts/repostat.sh
+
+alias dupe="bash ~/bin/.scripts/dupe.sh
+
 # ----------------------------------------------------------------------
 # DNF ALIASES
 # ---------------------------------------------------------------------- 
