@@ -122,3 +122,10 @@ function cdf() {
 ngrep() {
     find . -type f -name "$1" -exec grep -H "${@:2}" {} + | sed -re 's/:/💩/' | column -ts💩
 }
+
+function md5() { md5sum<<<$1 | cut -f1 -d' '; }
+
+function y2m() {
+youtube-dl -t --extract-audio --audio-format mp3 "$@"
+}
+
