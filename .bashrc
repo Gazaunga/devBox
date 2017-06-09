@@ -15,6 +15,11 @@
 
 export XDG_CONFIG_HOME=$HOME/.config
 
+# put ~/bin first on PATH
+if [ -d "$HOME/bin" ]; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # Auto-correct misspelled directories
 shopt -s dirspell direxpand
 
