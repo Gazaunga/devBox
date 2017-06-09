@@ -20,6 +20,9 @@ if [ -d "$HOME/bin" ]; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# Auto cd
+shopt -s autocd
+
 # Auto-correct misspelled directories
 shopt -s dirspell direxpand
 
