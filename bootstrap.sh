@@ -69,7 +69,6 @@ cd ~/.local/share/fonts
 
 bash download.sh
 
-fc-cache -f
 
 
 
