@@ -13,4 +13,5 @@ mv -f pok3r ~/pok3r
 mv -f .config ~/.config
 mv -f .local ~/.local
 mv -f bin ~/bin
-reboot
+cd ~/devBox/bin/.scripts
+sh rubystrap.sh
