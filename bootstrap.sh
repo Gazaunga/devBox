@@ -26,26 +26,26 @@ cd ~
 
 sudo dnf -y install git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
 
-git clone git://github.com/sstephenson/rbenv.git .rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-exec $SHELL
+#git clone git://github.com/sstephenson/rbenv.git .rbenv
+#echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+#echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+#exec $SHELL
 
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-exec $SHELL
+#git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+#echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+#exec $SHELL
 
-git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+#git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 
 source ~/.bashrc
 
-rbenv install 2.4.1
+#rbenv install 2.4.1
 
-rbenv global 2.4.1
+#rbenv global 2.4.1
 
 ruby -v
 
-rbenv rehash
+#rbenv rehash
 
 sudo dnf -y install nodejs epel-release postgresql-server postgresql-contrib
 
