@@ -19,6 +19,11 @@ rule ".pdf" => ".markdown" do |t|
   sh "pandoc -o #{t.name} #{t.source}
 end
 
+task :mv_target do
+  cp '*.md', '/tmp'
+  cp '*.markdown', '/tmp', :verbose => true
+end
+
 ############################################################################################################
 
 # task :clean
@@ -29,3 +34,22 @@ end
 
 
 # directory "/tmp"
+
+# task :copy_some_files do
+#   cp 'one_file', 'destination'
+#   cp 'another_file', 'destination', :verbose => true
+# end
+
+directory '/tmp' # creates a directory task named '/tmp' which will create the '/tmp' directory if it doesn't alrady exist
+
+file '**/*.md' => '/tmp' do
+  cp '**/*.md' => '/tmp'
+end
+
+
+file '**/*.markdown' => '/tmp' do
+  cp '**/*.markdown' => '/tmp'
+end
+
+
+#PREREQUISITES
