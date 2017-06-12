@@ -51,3 +51,17 @@ stty susp undef
 if [ "$TERM" = "screen" ]; then
     export TERM=screen-256color
 fi
+
+#PATHS="
+#/usr/local/bin
+#/usr/local/sbin
+#/usr/local/share/python
+#$HOME/.rbenv/bin
+#$HOME/.rvm/bin
+#$HOME/.local/bin
+#"
+#old_path=$PATH
+#for path in $PATHS; do
+#    new_path=$new_path:$path
+#done
+#export PATH=${new_path:1}:$old_path
