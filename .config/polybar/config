@@ -1,0 +1,154 @@
+[colors]
+background = #282828
+foreground = #88c0d0
+
+secondary-background = #282828
+secondary-foreground = #88c0d0
+slight-pink = #88c0d0
+
+[module/x]
+type = internal/xworkspaces
+pin-workspaces = true wrapping-scroll = false
+
+enable-scroll = true
+
+label-focused = %name%
+label-focused-background = ${colors.secondary-background}
+label-focused-padding = 1
+
+label-focused-underline = ${colors.slight-pink}
+
+label-unfocused = %name%
+label-unfocused-padding = 1
+
+label-visible = %name%
+label-visible-padding = 1
+
+[module/i3]
+type = internal/i3
+
+format = <label-state> <label-mode>
+index-sort = false
+
+pin-workspaces = true
+wrapping-scroll = false
+
+label-focused = %name%
+label-focused-background = ${colors.secondary-background}
+label-focused-foreground = ${colors.secondary-foreground}
+label-focused-padding = 1
+
+label-focused-underline = ${colors.slight-pink}
+
+label-unfocused = %name%
+label-unfocused-padding = 1
+
+label-visible = %name%
+label-visible-padding = 1
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+
+format-online = <icon-prev>  <icon-stop>   <label-song>   <icon-play> <icon-pause>  <icon-next>
+;format-playing = <label-song> <icon-pause>
+;format-paused = <icon-stop> <icon-play>
+format-stopped = 
+
+icon-prev = 
+icon-stop = 
+icon-pause = 
+icon-play = 
+icon-next = 
+
+label-song-maxlen = 50
+label-song-ellipsis = true
+
+;format-offline = 
+
+format-online-underline = #AA
+format-online-padding = 1
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /home
+
+label-mounted =  %free%
+
+interval = 5
+
+label-mounted-padding = 1
+label-mounted-background = ${colors.secondary-background}
+label-mounted-foreground = ${colors.secondary-foreground}
+label-mounted-underline = #AA
+
+
+[module/date]
+type = internal/date
+interval = 15 
+
+date = " %Y-%m-%d"
+
+label = %date%
+
+label-padding = 1
+label-background = ${colors.secondary-background}
+label-foreground = ${colors.secondary-foreground}
+label-underline = #AA
+
+[module/time]
+type = internal/date
+interval = 1.0
+
+time = " %H:%M:%S"
+
+label = %time%
+
+label-padding = 1
+label-background = ${colors.secondary-background}
+label-foreground = ${colors.secondary-foreground}
+label-underline = #AA
+
+[bar/sunset-first]
+monitor = DVI-I-0
+
+modules-left = i3
+modules-center = mpd
+modules-right = filesystem time date
+
+width = 100%
+height = 33
+
+bottom = true
+
+line-size = 2
+line-color = ${colors.slight-pink}
+
+padding-right = 1
+padding-left = 0
+module-margin = 1
+
+separator = 
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = Hack:pixelsize=12;3
+font-1 = FontAwesome:pixelsize=13;3
+font-2 = Source Han Sans CN Regular:pixelsize=13;3
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[bar/sunset-second]
+inherit = bar/sunset-first
+
+monitor = DVI-D-0
+
+[global/wm]
+#margin-top = 500
+
+; vim:ft=dosini
