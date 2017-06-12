@@ -1,0 +1,31 @@
+require 'rake\clean'
+
+Dir.chdir "project" # Rakefilie should be at top of directory tree (dev folder), this is the only variable that changes
+
+source_files = Rake::FileList["**/*.md", "**/*.markdown"] # file list to be inlcuded
+files.exclude("~*") # files to be excluded
+files.exclude(/^Notes\//) # folder to be excluded
+
+
+task :default => :pdf # default task when rake is run without arguments
+
+task :pdf => source_files.ext(".pdf") # printable output with the built files (not the source files)
+
+rule ".pdf" => ".md" do |t|
+  sh "pandoc -o #{t.name} #{t.source}"
+end
+
+rule ".pdf" => ".markdown" do |t|
+  sh "pandoc -o #{t.name} #{t.source}
+end
+
+############################################################################################################
+
+# task :clean
+#   cp ::FileList
+
+# FileList['data/**/*'].exclude('*.txt')
+
+
+
+# directory "/tmp"
