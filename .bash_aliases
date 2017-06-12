@@ -103,6 +103,7 @@ alias repostat="bash ~/bin/.scripts/repostat.sh
 
 alias dupe="bash ~/bin/.scripts/dupe.sh
 
+alias glances="glances -w"
 # ----------------------------------------------------------------------
 # DNF ALIASES
 # ---------------------------------------------------------------------- 
