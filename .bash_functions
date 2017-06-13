@@ -133,3 +133,22 @@ youtube-dl -t --extract-audio --audio-format mp3 "$@"
 # files up to 10gb
 transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
+
+new-ruby-script()
+{
+    if [ -n "$1" ]; then
+        local script="$1"
+    else
+        local script=`mktemp scriptster.rb.XXXX`
+    fi
+
+    local url="https://raw.githubusercontent.com/pazdera/scriptster/master"
+    curl "$url/examples/minimal-template.rb" >"$script"
+    #curl "$url/examples/documented-template.rb" >"$script"
+
+    chmod +x "$script"
+    $EDITOR "$script"
+}
+
+#This will download the minimal template from scripster’s git repo and start editing it Just drop it at the end of your ~/.bashrc or ~/.zshrc file and you’ll be able to start a script in a matter of seconds with the following command:
+# new-ruby-script <file-path>
