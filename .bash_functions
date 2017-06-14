@@ -152,3 +152,7 @@ new-ruby-script()
 
 #This will download the minimal template from scripster’s git repo and start editing it Just drop it at the end of your ~/.bashrc or ~/.zshrc file and you’ll be able to start a script in a matter of seconds with the following command:
 # new-ruby-script <file-path>
+
+function video {
+    mpv --cookies-file=/tmp/cookies.txt $(youtube-dl -g --cookies /tmp/cookies.txt "$1")
+}
