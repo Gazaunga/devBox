@@ -156,3 +156,15 @@ new-ruby-script()
 function video {
     mpv --cookies-file=/tmp/cookies.txt $(youtube-dl -g --cookies /tmp/cookies.txt "$1")
 }
+
+function up {
+    if [[ "$#" < 1 ]]; then
+        cd ..
+    else
+        CDSTR=""
+        for i in {1..$1}; do
+            CDSTR="../$CDSTR"
+        done
+        cd $CDSTR
+    fi
+}
