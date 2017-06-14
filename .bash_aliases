@@ -104,6 +104,8 @@ alias repostat="bash ~/bin/.scripts/repostat.sh
 alias dupe="bash ~/bin/.scripts/dupe.sh
 
 alias glances="glances -w"
+
+alias gup="sh ~/bin/.scripts/git.sh"
 # ----------------------------------------------------------------------
 # DNF ALIASES
 # ---------------------------------------------------------------------- 
