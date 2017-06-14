@@ -106,6 +106,10 @@ alias dupe="bash ~/bin/.scripts/dupe.sh
 alias glances="glances -w"
 
 alias gup="sh ~/bin/.scripts/git.sh"
+
+alias mkdir='mkdir -p -v'
+
+alias tnethack='telnet nethack.alt.org'
 # ----------------------------------------------------------------------
 # DNF ALIASES
 # ---------------------------------------------------------------------- 
