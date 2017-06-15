@@ -1,6 +1,6 @@
-src_dir = "/full_path/to_some/ex_file.txt"
+src_dir = "/gazbit/devBox"
 
- dst_dir = "/full_path/target_dir"
+ dst_dir = "/gazbit"
 
  #Use the method below to do the moving
  move_src_to_target_dir(src_dir, dst_dir)
@@ -20,3 +20,27 @@ src_dir = "/full_path/to_some/ex_file.txt"
 
  end
  end
+##########################
+
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+# __FILE__
+
+dots=[".bash_aliases",".bash_functions",".bash_profile",".bashrc",".profile",".lesskey",".nanorc",".screenrc","gitctl","pok3r"]
+
+dirs=["/.config","/.local","/bin",]
+
+FileUtils.mv('#{dots}', '#{tmp_dir}')
+FileUtils.mv_f('#{dirs}', '#{tmp_dir}')
+
+#########
+
+Dir.glob("*.md") {|filename|
+  file = File.new(filename)
+  mtime = file.mtime
+  new_filename = "#{mtime.year}-#{mtime.month}-#{mtime.day}.pdf"
+  puts "Renaming #{filename} to #{new_filename} ..."
+  File.rename(filename, new_filename)
+}
