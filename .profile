@@ -7,6 +7,8 @@ export GIT_EDITOR='/usr/bin/kate'
 export BROWSER=qutebrowser
 export TERMINAL=konsole
 export FILEBROWSER=dolphin
+export XDG_CONFIG_HOME=$HOME/.config
+
 
 if [ -d "$HOME/.local" ]; then
     PATH="$PATH:$HOME/.local"
