@@ -4,6 +4,17 @@
 # ALIASES
 # ----------------------------------------------------------------------
 
+alias tmp='mkdir /tmp/$$ ; cd /tmp/$$'
+alias untmp='rm -rf /tmp/$$'
+
+alias q64='qemu-system-x86_64 --enable-kvm -m 1536'
+
+alias hr='printf $(printf "\e[$(shuf -i 91-97 -n 1);1m%%%ds\e[0m\n" $(tput cols)) | tr " " ='
+
+alias npr='mpv http://wamu-1.streamguys.com'
+
+alias y='youtube-dl --no-mtime --restrict-filenames --format "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"'
+
 alias ix='curl -F "'"f:1=<-"'" ix.io'
 
 alias tmux='tmux -2'
