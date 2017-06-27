@@ -4,6 +4,8 @@
 # ALIASES
 # ----------------------------------------------------------------------
 
+alias gem-get="gem install --user-install"
+
 alias tmp='mkdir /tmp/$$ ; cd /tmp/$$'
 alias untmp='rm -rf /tmp/$$'
 
