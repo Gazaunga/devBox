@@ -9,7 +9,7 @@
 #
 
 basename="${0##*/}"
-repodir="$HOME/repositories/"
+repodir="$HOME/.local"
 
 # load settings from ~/.gitctl.conf if present
 # NOTE: you can set $servername here(!)
