@@ -20,6 +20,7 @@ git config --global user.email "jeremy.ottley@gmail.com"
 git config --global core.autocrlf input
 git config --global core.safecrlf true
 
+gem install thor script_executor colorize gosu jekyll rake
 bundle install --path vendor/bundle 
 e_underline "Read To Program With Ruby!"
 
