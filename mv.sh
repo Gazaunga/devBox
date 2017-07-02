@@ -48,7 +48,7 @@ e_success() { printf "${green}✔ %s${reset}\n" "$@"
 }
 
 cd ~
-dirmerge $HOME/BSPWM $HOME/
+dirmerge $HOME/devBox $HOME/
 e_success "Directories Merged!"
 
 cd ~/devBox/bin/.scripts
