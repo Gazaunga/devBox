@@ -7,8 +7,8 @@ git clone git://github.com/sstephenson/rbenv.git .rbenv
 e_arrow "Making ruby-build"
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 e_arrow "Adjusting Profile and Path"
-#echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /etc/profile.d/rbenv.sh
-#echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
+sudo bash -c "echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /etc/profile.d/rbenv.sh"
+sudo bash -c "echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh"
 source /etc/profile
 e_success "Grabbing Ruby"
 rbenv install 2.4.1
