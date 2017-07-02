@@ -22,3 +22,6 @@ git config --global core.safecrlf true
 
 bundle install --path vendor/bundle 
 e_underline "Read To Program With Ruby!"
+
+cd ~/devBox
+sh mv.sh
