@@ -6,5 +6,5 @@ for type in Bold Light Medium Regular Retina; do
     "https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-${type}.ttf?raw=true";
 done
 
-cd ~/devBox
-bash mv.sh
+cd ~/devBox/bin/.scripts
+sh ruby.sh
