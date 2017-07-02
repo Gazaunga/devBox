@@ -14,11 +14,13 @@ cabal install yeganesh
 
 #sudo dnf -y install konsole
 
+cd ~
+
 git clone https://github.com/andrewseidl/dotfiles.git
 
 cd dotfiles
 
-mv dotfiles/home/.xmonad ~
+mv -f dotfiles/home/.xmonad ~
 #mv dotfiles/home/.Xresources ~ #for use with urxvt only
 
 #change the top bar to only run on the main screen, in ~/.xmonad/xmobar.hs
@@ -45,7 +47,7 @@ source ~/.bashrc
 
 #rbenv global 2.4.1
 
-ruby -v
+#ruby -v
 
 #rbenv rehash
 
@@ -64,8 +66,8 @@ sudo dnf group install "KDE Software Development"
 sudo dnf group install "KDE Telepathy"
 sudo dnf group install "Legacy Fonts"
 sudo dnf group install "LibreOffice"
-sudo dnf group install "Ruby"
-sudo dnf group install "Ruby on Rails"
+#sudo dnf group install "Ruby"
+#sudo dnf group install "Ruby on Rails"
 
 cd ~
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
