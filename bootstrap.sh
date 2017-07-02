@@ -1,10 +1,10 @@
 #!/bin/bash
 
-sudo dnf copr enable postmodern/chruby
+#sudo dnf copr enable postmodern/chruby
 
 sudo dnf -y update
 
-sudo dnf -y install xmonad ghc-xmonad-contrib{,-devel} polybar chruby
+sudo dnf -y install xmonad ghc-xmonad-contrib{,-devel} polybar #chruby
 
 sudo dnf -y install cabal-install
 
