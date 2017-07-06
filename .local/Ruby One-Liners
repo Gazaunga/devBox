@@ -1,0 +1,24 @@
+#add line numbers only for nonblank lines
+ruby -lpe '/^$/ ? $.-=1 : $_ = "#$. :#$_"'
+
+
+#word count
+ruby -ane 'w = (w||0) + $F.size; END { p w }'
+
+#delete trailing whitespace
+ruby -pe '$_.gsub! /\s+$/, "\n"'
+
+#delete consecutive blank lines
+ruby -ne 'puts $_ if /^[^\n]/../^$/'
+
+# substitute (find and replace) "foo" with "bar" on each line
+$  ruby -pe 'gsub(/foo/, "bar")' < file.txt
+
+# substitute "foo" with "bar" ONLY for lines which contain "baz"
+$  ruby -pe 'gsub(/foo/, "bar") if $_ =~ /baz/' < file.txt
+
+# substitute "foo" with "bar" EXCEPT for lines which contain "baz"
+$  ruby -pe 'gsub(/foo/, "bar") unless $_ =~ /baz/' < file.txt
+
+# substitute "foo" or "bar" or "baz".... with "baq"
+$  ruby -pe 'gsub(/(foo|bar|baz)/, "baq")' < file.txt
