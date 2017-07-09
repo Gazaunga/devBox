@@ -4,29 +4,29 @@
 
 sudo dnf -y update
 
-sudo dnf -y install xmonad ghc-xmonad-contrib{,-devel} polybar #chruby
+#sudo dnf -y install xmonad ghc-xmonad-contrib{,-devel} polybar #chruby
 
-sudo dnf -y install cabal-install
+#sudo dnf -y install cabal-install
 
-cabal update
+#cabal update
 
-cabal install yeganesh
+#cabal install yeganesh
 
 #sudo dnf -y install konsole
 
 cd ~
 
-git clone https://github.com/andrewseidl/dotfiles.git
+#git clone https://github.com/andrewseidl/dotfiles.git
 
-cd dotfiles
+#cd dotfiles
 
-mv -f dotfiles/home/.xmonad ~
+#mv -f dotfiles/home/.xmonad ~
 #mv dotfiles/home/.Xresources ~ #for use with urxvt only
 
 #change the top bar to only run on the main screen, in ~/.xmonad/xmobar.hs
 #comment out my custom font in ~/.Xresources, lines 5-6 (comments with a #)
 
-cd ~
+#cd ~
 
 sudo dnf -y install git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
 
@@ -59,16 +59,18 @@ sudo postgresql-setup --initdb --unit postgresql
 
 sudo dnf -y install phpPgAdmin pgadmin3
 
-sudo dnf group install "KDE Applications"
-sudo dnf group install "KDE Multimedia support"
-sudo dnf group install "KDE Office"
-sudo dnf group install "KDE Software Development"
-sudo dnf group install "KDE Telepathy"
-sudo dnf group install "Legacy Fonts"
-sudo dnf group install "LibreOffice"
-#sudo dnf group install "Ruby"
-#sudo dnf group install "Ruby on Rails"
+#sudo dnf group install "KDE Applications"
+#sudo dnf group install "KDE Multimedia support"
+#sudo dnf group install "KDE Office"
+#sudo dnf group install "KDE Software Development"
+#sudo dnf group install "KDE Telepathy"
+#sudo dnf group install "Legacy Fonts"
+#sudo dnf group install "LibreOffice"
+sudo dnf group install "Ruby"
+sudo dnf group install "Ruby on Rails"
 
+sudo dnf -y install rubygem-thor rubygem-jekyll rubygem-bundler rubygem-rake
+bundle --local
 cd ~
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 
