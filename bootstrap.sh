@@ -74,7 +74,8 @@ bundle --local
 cd ~
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 
-#cd ~/devBox/.local/share/fonts
+cd ~/devBox
+sh mv.sh
 
 #bash download.sh
 
