@@ -79,6 +79,9 @@ sh mv.sh
 
 #bash download.sh
 
+cd ~
+
+curl -L https://git.io/slim > ~/.zshrc
 
 
 
