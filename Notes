@@ -5,4 +5,3 @@ curl -sLf https://spacevim.org/install.sh | bash
 #this won't work on a wayland box, but it might on something else
 https://gitlab.com/moviuro/moviuro.bin/raw/master/gif-soup
 
-xmonad with wayland is STUPID
